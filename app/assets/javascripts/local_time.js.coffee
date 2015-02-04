@@ -142,11 +142,13 @@ class RelativeTime
 
   relativeWeekday: ->
     switch @calendarDate.daysPassed()
+      when -1
+        "tomorrow"
       when 0
         "today"
       when 1
         "yesterday"
-      when 2,3,4,5,6
+      default 
         strftime @date, "%A"
 
   formatDate: ->
