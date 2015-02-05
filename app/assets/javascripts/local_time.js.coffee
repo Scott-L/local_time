@@ -148,7 +148,7 @@ class RelativeTime
         "today"
       when 1
         "yesterday"
-      default 
+      else 
         strftime @date, "%A"
 
   formatDate: ->
